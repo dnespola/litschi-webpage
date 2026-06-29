@@ -54,12 +54,12 @@ h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.1;
   color: var(--cream);
-  margin-bottom: 2rem;
   font-weight: 400;
 }
 
-h2 em {
-  font-size: clamp(2rem, 4vw, 2rem);
+p em {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-style: italic;
   color: var(--muted);
 }
@@ -75,7 +75,7 @@ h2 em {
   background: var(--dark);
   border-left: 3px solid var(--red);
   padding: 2.5rem 3rem;
-  margin: 4rem 0;
+  margin: 0.5rem 0 1.5rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -106,20 +106,12 @@ h2 em {
 }
 
 .quote-block p.en {
+  margin-top: 1rem;
   font-style: italic;
   font-size: clamp(1rem, 1.5vw, 2rem);
   color: var(--muted);
 }
 
-
-
-@media screen and (max-width: 600px) {
-  section {
-    padding: 6rem 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
 
 
 

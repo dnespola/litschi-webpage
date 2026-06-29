@@ -1,16 +1,19 @@
 @charset "UTF-8";
+section {
+  padding: 2rem 1rem;
+}
 section div.section-title {
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 section div.section-title div.red-line {
   display: inline-block;
+  margin-top: 8px;
   width: 2.5rem;
   height: 2px;
   background: var(--red);
   vertical-align: middle;
   margin-right: 0.8rem;
-  margin-top: 0.5rem;
 }
 section div.section-title h1 {
   font-family: "Bebas Neue", sans-serif;
@@ -22,9 +25,28 @@ section div.section-title h1 {
 
 @media screen and (min-width: 600px) {
   section {
-    padding: 6rem 4rem;
+    padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
+  }
+  section div.section-title {
+    display: flex;
+    margin-bottom: 0.8rem;
+  }
+  section div.section-title div.red-line {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2px;
+    background: var(--red);
+    vertical-align: middle;
+    margin-right: 0.8rem;
+  }
+  section div.section-title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
   }
 }
 /* ── HEADER ── */
@@ -33,6 +55,7 @@ header .header-bg {
   inset: 0;
   background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(200, 39, 45, 0.18) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 80% 70%, rgba(232, 67, 42, 0.1) 0%, transparent 60%);
   z-index: 0;
+  width: 100%;
 }
 header .grain {
   position: absolute;
@@ -50,15 +73,16 @@ header .band-name {
   color: var(--cream);
   opacity: 0;
   animation: fadeUp 0.9s 0.4s forwards;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 0.5rem 1.2rem;
 }
 header .band-name span {
   color: var(--red);
 }
 header .header-meta {
   display: flex;
-  gap: 3rem;
-  margin-top: 3rem;
-  padding: 2.5rem;
+  gap: 2rem;
+  padding: 2rem;
   border-top: 1px solid rgba(245, 240, 232, 0.15);
   opacity: 0;
   animation: fadeUp 0.9s 0.7s forwards;
@@ -97,69 +121,6 @@ header .header-content .header-nav li a {
   text-decoration: none;
 }
 
-/*header {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1.5rem;
-  overflow: hidden;
-  background: var(--black);
-
-  .header-bg {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(200, 39, 45, 0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 80% 70%, rgba(232, 67, 42, 0.10) 0%, transparent 60%);
-    z-index: 0;
-  }
-
-
-
-
-
-  .band-name {
-    margin-left: 10px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(7rem, 18vw, 18rem);
-    line-height: 0.85;
-    letter-spacing: -0.02em;
-    color: var(--cream);
-    opacity: 0;
-    animation: fadeUp 0.9s 0.4s forwards;
-  }
-
-  .band-name span {
-    color: var(--red);
-  }
-
-  .header-meta {
-    display: flex;
-    gap: 3rem;
-    margin-top: 3rem;
-    padding: 2.5rem;
-    border-top: 1px solid rgba(245, 240, 232, 0.15);
-    opacity: 0;
-    animation: fadeUp 0.9s 0.7s forwards;
-  }
-
-  .meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .meta-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .meta-value {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--cream);
-  }
-}*/
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -172,19 +133,10 @@ header .header-content .header-nav li a {
 }
 @media screen and (min-width: 600px) {
   header {
-    padding: 6rem 4rem;
+    min-height: 100vh;
+    padding-top: 10rem;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  header .band-name {
-    display: inline-flex;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: clamp(7rem, 18vw, 18rem);
-    line-height: 0.85;
-    letter-spacing: -0.02em;
-    color: var(--cream);
-    opacity: 0;
-    animation: fadeUp 0.9s 0.4s forwards;
   }
   header .header-content {
     display: flex;
@@ -208,19 +160,6 @@ header .header-content .header-nav li a {
   header .header-content .header-nav li a {
     font-size: 1.8rem;
   }
-  /*header {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 6rem 4rem;
-    margin: 0 auto;
-    overflow: hidden;
-    background: var(--black);
-
-
-  }*/
 }
 p.description, p.block-text {
   padding: 1rem 1rem 1rem 1rem;
@@ -247,7 +186,6 @@ p.description-en {
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.1;
   color: var(--cream);
-  margin-bottom: 2rem;
   font-weight: 400;
 }
 .member h2 em {
@@ -256,6 +194,9 @@ p.description-en {
 }
 .member div.bio-image {
   order: 1;
+  align-content: center;
+  justify-content: center;
+  display: flex;
 }
 .member div.bio-image img {
   width: 300px;
@@ -267,13 +208,14 @@ p.description-en {
 }
 .member div.bio-data {
   order: 2;
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 600px) {
   .member {
-    padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 4rem;
   }
   .member .bio {
     gap: 2rem;
@@ -288,6 +230,7 @@ p.description-en {
   }
   .member-left .bio .bio-data {
     order: 2;
+    margin-bottom: 2rem;
   }
   .member-right {
     justify-content: flex-end;
@@ -297,27 +240,57 @@ p.description-en {
   }
   .member-right .bio .bio-data {
     order: 1;
+    margin-bottom: 2rem;
   }
 }
+.contact-section {
+  background: var(--dark);
+  padding: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.form-group {
+  width: 400px;
+  margin-top: 10px;
+}
+.form-group div label {
+  width: 300px !important;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--cream);
+  font-family: "Bebas Neue", sans-serif;
+}
+.form-group div input, .form-group div textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.form-submit-button {
+  width: 100%;
+  background-color: var(--red);
+  color: var(--cream);
+  font-family: "Bebas Neue", sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--red);
+}
+
 @media screen and (min-width: 600px) {
   /* ── CONTACT BLOCK ── */
   .contact-section {
     background: var(--dark);
-    padding: 5rem 4rem;
     position: relative;
     overflow: hidden;
-  }
-  .contact-section::after {
-    content: "LITSCHI";
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 18rem;
-    color: rgba(200, 39, 45, 0.04);
-    position: absolute;
-    right: -2rem;
-    bottom: -3rem;
-    line-height: 1;
-    pointer-events: none;
-    white-space: nowrap;
   }
   .contact-grid {
     display: grid;
@@ -351,30 +324,6 @@ p.description-en {
   .contact-value a:hover {
     border-color: var(--red);
     color: var(--red);
-  }
-  .form-group {
-    width: 400px;
-    margin-top: 10px;
-  }
-  .form-group div label {
-    width: 300px !important;
-    font-weight: 500;
-    font-size: 1rem;
-    color: var(--cream);
-    font-family: "Bebas Neue", sans-serif;
-  }
-  .form-group div input, .form-group div textarea {
-    width: 100%;
-    padding: 10px;
-  }
-  .form-submit-button {
-    width: 100%;
-    background-color: var(--red);
-    color: var(--cream);
-    font-family: "Bebas Neue", sans-serif;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--red);
   }
   .success {
     padding: 1rem 1rem 1rem 0rem;
@@ -458,12 +407,12 @@ h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.1;
   color: var(--cream);
-  margin-bottom: 2rem;
   font-weight: 400;
 }
 
-h2 em {
-  font-size: clamp(2rem, 4vw, 2rem);
+p em {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-style: italic;
   color: var(--muted);
 }
@@ -479,7 +428,7 @@ h2 em {
   background: var(--dark);
   border-left: 3px solid var(--red);
   padding: 2.5rem 3rem;
-  margin: 4rem 0;
+  margin: 0.5rem 0 1.5rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -510,17 +459,10 @@ h2 em {
 }
 
 .quote-block p.en {
+  margin-top: 1rem;
   font-style: italic;
   font-size: clamp(1rem, 1.5vw, 2rem);
   color: var(--muted);
-}
-
-@media screen and (max-width: 600px) {
-  section {
-    padding: 6rem 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

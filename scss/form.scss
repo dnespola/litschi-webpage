@@ -1,23 +1,55 @@
+.contact-section {
+  background: var(--dark);
+  padding: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.form-group {
+  width: 400px;
+  margin-top: 10px;
+
+  div {
+    label {
+      width: 300px !important;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--cream);
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
+
+.form-submit-button {
+  width: 100%;
+  background-color: var(--red);
+  color: var(--cream);
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--red);
+}
+
 @media screen and (min-width: 600px) {
   /* ── CONTACT BLOCK ── */
   .contact-section {
     background: var(--dark);
-    padding: 5rem 4rem;
     position: relative;
     overflow: hidden;
-  }
-
-  .contact-section::after {
-    content: 'LITSCHI';
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 18rem;
-    color: rgba(200, 39, 45, 0.04);
-    position: absolute;
-    right: -2rem;
-    bottom: -3rem;
-    line-height: 1;
-    pointer-events: none;
-    white-space: nowrap;
   }
 
   .contact-grid {
@@ -28,7 +60,6 @@
     position: relative;
     z-index: 1;
   }
-
 
   .contact-item {
     display: flex;
@@ -58,37 +89,6 @@
   .contact-value a:hover {
     border-color: var(--red);
     color: var(--red);
-  }
-
-  .form-group {
-    //border: 1px solid white;
-    width: 400px;
-    margin-top: 10px;
-
-    div {
-      label {
-        width: 300px !important;
-        font-weight: 500;
-        font-size: 1rem;
-        color: var(--cream);
-        font-family: 'Bebas Neue', sans-serif;
-      }
-
-      input, textarea {
-        width: 100%;
-        padding: 10px;
-      }
-    }
-  }
-
-  .form-submit-button {
-    width: 100%;
-    background-color: var(--red);
-    color: var(--cream);
-    font-family: 'Bebas Neue', sans-serif;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--red);
   }
 
   .success {
