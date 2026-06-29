@@ -1,0 +1,33 @@
+section {
+  div.section-title {
+    display: flex;
+    margin-bottom: 1rem;
+
+    div.red-line {
+      display: inline-block;
+      width: 2.5rem;
+      height: 2px;
+      background: var(--red);
+      vertical-align: middle;
+      margin-right: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+  section {
+    padding: 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LITSCHI – Press Kit 2025</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet">
+    <style>
+      :root {
+        --red: #C8272D;
+        --cream: #F5F0E8;
+        --black: #0E0E0E;
+        --dark: #1A1A1A;
+        --mid: #2E2E2E;
+        --muted: #888;
+        --accent: #E8432A;
+      }
+      
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        background: var(--black);
+        color: var(--cream);
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+      
+      /* ── HEADER ── */
+      header {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 4rem;
+        overflow: hidden;
+        background: var(--black);
+      }
+      
+      .header-bg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(200, 39, 45, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 70%, rgba(232, 67, 42, 0.10) 0%, transparent 60%);
+        z-index: 0;
+      }
+      
+      .grain {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        z-index: 1;
+        pointer-events: none;
+      }
+      
+      .header-content {
+        position: relative;
+        z-index: 2;
+      }
+      
+      .tag {
+        display: inline-block;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--red);
+        border: 1px solid var(--red);
+        padding: 0.3rem 0.8rem;
+        margin-bottom: 2rem;
+        opacity: 0;
+        animation: fadeUp 0.8s 0.2s forwards;
+      }
+      
+      .band-name {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(7rem, 18vw, 18rem);
+        line-height: 0.85;
+        letter-spacing: -0.02em;
+        color: var(--cream);
+        opacity: 0;
+        animation: fadeUp 0.9s 0.4s forwards;
+      }
+      
+      .band-name span {
+        color: var(--red);
+      }
+      
+      .header-meta {
+        display: flex;
+        gap: 3rem;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(245, 240, 232, 0.15);
+        opacity: 0;
+        animation: fadeUp 0.9s 0.7s forwards;
+      }
+      
+      .meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      
+      .meta-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      
+      .meta-value {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--cream);
+      }
+      
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* ── SECTIONS ── */
+      section {
+        padding: 6rem 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 1.5rem;
+      }
+      
+      h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.1;
+        color: var(--cream);
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+      
+      h2 em {
+        font-style: italic;
+        color: var(--muted);
+      }
+      
+      p {
+        font-size: 1.05rem;
+        color: rgba(245, 240, 232, 0.8);
+        max-width: 680px;
+        margin-bottom: 1.2rem;
+      }
+      
+      /* ── DIVIDER ── */
+      .divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(200, 39, 45, 0.5), transparent);
+        margin: 0 4rem;
+      }
+      
+      /* ── QUOTE ── */
+      .quote-block {
+        background: var(--dark);
+        border-left: 3px solid var(--red);
+        padding: 2.5rem 3rem;
+        margin: 4rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .quote-block::before {
+        content: '"';
+        font-family: 'DM Serif Display', serif;
+        font-size: 12rem;
+        color: var(--red);
+        opacity: 0.07;
+        position: absolute;
+        top: -2rem;
+        left: 1rem;
+        line-height: 1;
+        pointer-events: none;
+      }
+      
+      .quote-block p {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(1.3rem, 2.5vw, 2rem);
+        font-style: italic;
+        line-height: 1.4;
+        color: var(--cream);
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0;
+      }
+      
+      /* ── MEMBERS GRID ── */
+      .members-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+      
+      @media (max-width: 900px) {
+        .members-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      
+      .member-card {
+        background: var(--dark);
+        border: 1px solid rgba(245, 240, 232, 0.07);
+        padding: 1.8rem 1.5rem;
+        transition: border-color 0.3s, transform 0.3s;
+      }
+      
+      .member-card:hover {
+        border-color: var(--red);
+        transform: translateY(-4px);
+      }
+      
+      .member-age {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3rem;
+        line-height: 1;
+        color: var(--red);
+        opacity: 0.4;
+      }
+      
+      .member-name {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.3rem;
+        color: var(--cream);
+        margin: 0.5rem 0 0.3rem;
+      }
+      
+      .member-role {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      
+      /* ── SOUND PILLS ── */
+      .sound-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin: 2rem 0;
+      }
+      
+      .pill {
+        border: 1px solid rgba(245, 240, 232, 0.2);
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--cream);
+        transition: background 0.2s, border-color 0.2s;
+      }
+      
+      .pill:hover {
+        background: var(--red);
+        border-color: var(--red);
+      }
+      
+      .pill.highlight {
+        background: var(--red);
+        border-color: var(--red);
+      }
+      
+      /* ── TWO-COL ── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+      
+      @media (max-width: 700px) {
+        .two-col {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        
+        header {
+          padding: 2rem;
+        }
+        
+        section {
+          padding: 4rem 2rem;
+        }
+        
+        .header-meta {
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+      }
+      
+      /* ── CONTACT BLOCK ── */
+      .contact-section {
+        background: var(--dark);
+        padding: 5rem 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .contact-section::after {
+        content: 'LITSCHI';
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 18rem;
+        color: rgba(200, 39, 45, 0.04);
+        position: absolute;
+        right: -2rem;
+        bottom: -3rem;
+        line-height: 1;
+        pointer-events: none;
+        white-space: nowrap;
+      }
+      
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+      
+      @media (max-width: 700px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .contact-section {
+          padding: 4rem 2rem;
+        }
+      }
+      
+      
+      /* ── LANG SWITCHER ── */
+      .lang-block {
+        margin-top: 5rem;
+      }
+      
+      .lang-block h3 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+        color: var(--muted);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .lang-block h3::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: rgba(245, 240, 232, 0.1);
+      }
+      
+      /* ── FOOTER ── */
+      footer {
+        padding: 2rem 4rem;
+        border-top: 1px solid rgba(245, 240, 232, 0.07);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        color: var(--muted);
+        letter-spacing: 0.05em;
+      }
+      
+      footer strong {
+        color: var(--cream);
+      }
+      
+      /* ── LINE ACCENT ── */
+      .red-line {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2px;
+        background: var(--red);
+        vertical-align: middle;
+        margin-right: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- HEADER -->
+    <header>
+      <div class="header-bg"></div>
+      <div class="grain"></div>
+      <div class="header-content">
+        <div class="tag">Press Kit · Basel, CH · 2025</div>
+        <div class="band-name">LITS
+          <span>C</span>
+          HI
+        </div>
+        <div class="header-meta">
+          <div class="meta-item">
+            <span class="meta-label">Herkunft / Origin</span>
+            <span class="meta-value">Basel, Schweiz</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Genre</span>
+            <span class="meta-value">Pop · Rock · Blues</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Besetzung / Members</span>
+            <span class="meta-value">5 Personen</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Sprache / Language</span>
+            <span class="meta-value">English</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- BIO DE -->
+    <section>
+      <div class="section-label">
+        <span class="red-line"></span>
+        Biografie · Deutsch
+      </div>
+      <h2>Fünf Stimmen.<br><em>Ein Sound.</em></h2>
+      
+      <p>
+        Litschi klingt nach dem Moment, in dem fünf Menschen aufhören, nur Musik zu spielen – und
+        anfangen, miteinander zu sprechen. Die Basler Band verbindet Pop-Hooklines, Rock-Energie und
+        Blues-Tiefe zu einem Sound, der sich keine Schublade sucht, weil er keine braucht.
+      </p>
+      <p>
+        Was Litschi einzigartig macht, ist die Bandbreite: fünf Personen zwischen 24 und 49 Jahren,
+        mit fünf verschiedenen musikalischen Sozialisierungen. Punk, Rock, Blues, Pop – jeder bringt
+        seine eigene Welt mit. Charlie singt mit der Direktheit einer Frontfrau, die weiß, was sie
+        will. Daniele und Robin gestalten den Sound mit Gitarre, Keyboard und Backing Vocals. Manu
+        treibt die Band von hinten an, Paul verankert alles im Bass. Zusammen entstehen Songs, die
+        ehrlich sind – und die man nicht so schnell vergisst.
+      </p>
+      <p>
+        Litschi steht am Anfang – und man hört es: hungriger Sound, frische Energie, der Wille, live
+        zu überzeugen. Die Band hat bereits erste Bühnenerfahrung gesammelt und arbeitet
+        kontinuierlich an neuem Material.
+      </p>
+      
+      <div class="quote-block">
+        <p>Five perspectives, connected through music. Pop, rock, soul and funk flowing together.
+          All real. All ours.</p>
+      </div>
+      
+      <div class="sound-pills">
+        <span class="pill highlight">Pop</span>
+        <span class="pill highlight">Rock</span>
+        <span class="pill highlight">Blues</span>
+        <span class="pill">Soul</span>
+        <span class="pill">Funk</span>
+        <span class="pill">English Lyrics</span>
+        <span class="pill">Live Band</span>
+      </div>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <!-- BIO EN -->
+    <section class="lang-block">
+      <div class="section-label">
+        <span class="red-line"></span>
+        Biography · English
+      </div>
+      <h2>Where generations<br><em>meet the stage.</em></h2>
+      
+      <p>
+        Litschi sounds like five people who stopped just playing music – and started actually
+        talking to each other. The Basel-based band weaves pop hooks, rock energy, and blues depth
+        into a sound that refuses easy classification, because it doesn't need one.
+      </p>
+      <p>
+        What sets Litschi apart is the range. Five members, aged 24 to 49, each arriving with a
+        different musical upbringing: punk, rock, blues, pop. Charlie fronts the band with
+        conviction and presence. Daniele and Robin shape the sonic landscape across guitar,
+        keyboard, and harmonies. Manu drives from behind the kit, while Paul holds everything
+        together on bass. The result is music that feels genuine – songs built from real
+        perspectives, not a formula.
+      </p>
+      <p>
+        Litschi is a band at the start of something. You can hear it: raw energy, clear identity,
+        and a hunger to connect live. They've stepped onto their first stages and are steadily
+        building their catalogue, song by song.
+      </p>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <!-- MEMBERS -->
+    <section>
+      <div class="section-label">
+        <span class="red-line"></span>
+        Die Band · The Band
+      </div>
+      <h2>Rock <em>across generations.</em></h2>
+      <p>Von 24 bis 49 – eine Generation in einer Band. / Aged 24 to 49 – one generation in one
+        band.</p>
+      
+      <div class="members-grid">
+        <div class="member-card">
+          <div class="member-age">♀</div>
+          <div class="member-name">Charlie</div>
+          <div class="member-role">Lead Vocals</div>
+        </div>
+        <div class="member-card">
+          <div class="member-age">◈</div>
+          <div class="member-name">Daniele</div>
+          <div class="member-role">Guitar</div>
+        </div>
+        <div class="member-card">
+          <div class="member-age">◈</div>
+          <div class="member-name">Robin</div>
+          <div class="member-role">Guitar · Keys · Backing Vocals</div>
+        </div>
+        <div class="member-card">
+          <div class="member-age">◈</div>
+          <div class="member-name">Manu</div>
+          <div class="member-role">Drums</div>
+        </div>
+        <div class="member-card">
+          <div class="member-age">◈</div>
+          <div class="member-name">Paul</div>
+          <div class="member-role">Bass</div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <!-- MUSIC / LIVE -->
+    <section>
+      <div class="two-col">
+        <div>
+          <div class="section-label">
+            <span class="red-line"></span>
+            Musik · Music
+          </div>
+          <h2>Songs on<br><em>SoundCloud</em></h2>
+          <p>Litschi hat vier Songs auf SoundCloud veröffentlicht sowie eine aufgezeichnete
+            Live-Performance – ein erster ehrlicher Einblick in den Sound der Band.</p>
+          <p>Four original tracks available on SoundCloud, plus a recorded live performance
+            capturing the band in their natural habitat.</p>
+          <div class="sound-pills" style="margin-top:1.5rem;">
+            <span class="pill">4 Original Tracks</span>
+            <span class="pill">Live Video</span>
+            <span class="pill">SoundCloud</span>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">
+            <span class="red-line"></span>
+            Live
+          </div>
+          <h2>Auf der Bühne<br><em>zu Hause.</em></h2>
+          <p>Litschi hat erste Bühnenerfahrung gesammelt und ist bereit für mehr. Die Band bringt
+            fünf eigenwillige Persönlichkeiten auf die Bühne – und das ist genau das, was man sieht
+            und spürt.</p>
+          <p>Litschi is actively seeking booking opportunities. The band delivers a high-energy live
+            set drawing from their growing catalogue of originals.</p>
+          <div class="sound-pills" style="margin-top:1.5rem;">
+            <span class="pill highlight">Booking offen / Available</span>
+            <span class="pill">Clubs</span>
+            <span class="pill">Festivals</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="contact-section">
+      <div class="contact-grid">
+        <div>
+          <div class="section-label" style="margin-bottom:1rem;">
+            <span class="red-line"></span>
+            Kontakt · Contact
+          </div>
+          <div class="contact-item" style="margin-bottom:1.5rem;">
+            <span class="contact-label">Booking & Anfragen</span>
+            <span class="contact-value"><a
+              href="mailto:booking@litschi.ch">booking@litschi.ch</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Herkunft</span>
+            <span class="contact-value">Basel, Schweiz</span>
+          </div>
+        </div>
+        <div>
+          <div class="section-label" style="margin-bottom:1rem;">
+            <span class="red-line"></span>
+            Online
+          </div>
+          <div class="contact-item" style="margin-bottom:1rem;">
+            <span class="contact-label">SoundCloud</span>
+            <span class="contact-value"><a href="#">soundcloud.com/litschi</a></span>
+          </div>
+          <div class="contact-item" style="margin-bottom:1rem;">
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value"><a href="#">@litschi_band</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Live Video</span>
+            <span class="contact-value"><a href="#">Auf Anfrage / On request</a></span>
+          </div>
+        </div>
+        <div>
+          <div class="section-label" style="margin-bottom:1rem;">
+            <span class="red-line"></span>
+            Presse / Press
+          </div>
+          <div class="contact-item" style="margin-bottom:1rem;">
+            <span class="contact-label">Pressefotos</span>
+            <span class="contact-value"><a href="#">Auf Anfrage / On request</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Rider / Technical</span>
+            <span class="contact-value"><a href="#">Auf Anfrage / On request</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <span><strong>LITSCHI</strong> · Basel, CH · 2025</span>
+      <span>Press Kit · Pop · Rock · Blues</span>
+    </footer>
+  
+  </body>
+</html>

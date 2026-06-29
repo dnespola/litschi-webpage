@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  webserver:
+    build: .
+    ports:
+      - "8180:80"
+    volumes:
+      - ./html:/var/www/html
+    depends_on:
+      - mailhog
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"

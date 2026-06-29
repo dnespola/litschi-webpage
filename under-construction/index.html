@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LITSCHI – Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .logo {
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-bottom: 3rem;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background-color: #e63946;
+      margin: 0 auto 3rem auto;
+    }
+
+    .message {
+      font-size: 1.1rem;
+      color: #cccccc;
+      line-height: 1.8;
+      max-width: 480px;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 3rem;
+        letter-spacing: 0.2em;
+      }
+
+      .tagline {
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+      }
+
+      .message {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 0.7rem;
+        padding: 0 1rem;
+        text-align: center;
+      }
+    }
+
+    .message span {
+      color: #e63946;
+      font-weight: bold;
+    }
+
+    .dots {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #e63946;
+      border-radius: 50%;
+      animation: pulse 1.4s infinite ease-in-out;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 2rem;
+      font-size: 0.75rem;
+      color: #444444;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">LITSCHI</div>
+  <div class="tagline">No genre. Just LITSCHI.</div>
+  <div class="divider"></div>
+
+  <p class="message">
+    We're working on something worth hearing.<br/>
+    <span>Under Construction</span> – come back soon.
+  </p>
+
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <footer>&copy; 2026 LITSCHI. All rights reserved.</footer>
+
+</body>
+</html>
