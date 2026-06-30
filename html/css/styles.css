@@ -79,6 +79,10 @@ header .band-name {
 header .band-name span {
   color: var(--red);
 }
+header .band-banner {
+  max-width: 400px;
+  margin-left: 20px;
+}
 header .header-meta {
   display: flex;
   gap: 2rem;
@@ -137,6 +141,9 @@ header .header-content .header-nav li a {
     padding-top: 10rem;
     max-width: 1200px;
     margin: 0 auto;
+  }
+  header .band-banner {
+    max-width: 1200px;
   }
   header .header-content {
     display: flex;
