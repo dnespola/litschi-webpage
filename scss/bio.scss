@@ -1,0 +1,20 @@
+.bio-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .bio-right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .bio-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .bio-right {
+      display: block;
+    }
+  }
+}

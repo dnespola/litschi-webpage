@@ -168,6 +168,24 @@ header .header-content .header-nav li a {
     font-size: 1.8rem;
   }
 }
+.bio-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.bio-wrapper .bio-right {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .bio-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .bio-wrapper .bio-right {
+    display: block;
+  }
+}
 p.description, p.block-text {
   padding: 1rem 1rem 1rem 1rem;
   font-size: 1.05rem;
