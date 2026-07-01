@@ -1,109 +1,47 @@
-.contact-section {
-  background: var(--dark);
-  padding: 1rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-grid {
-  display: flex;
-  flex-direction: column;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1200px;
-  margin: 0 auto;
-  z-index: 1;
-}
-
-.form-group {
-  width: 400px;
+form {
   margin-top: 10px;
+  width: 100%;
 
-  div {
     label {
       width: 300px !important;
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: var(--cream);
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'League Spartan', sans-serif;
     }
 
     input, textarea {
       width: 100%;
       padding: 10px;
     }
-  }
 }
 
 .form-submit-button {
   width: 100%;
   background-color: var(--red);
   color: var(--cream);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'League Spartan', sans-serif;
   padding: 10px;
   border-radius: 10px;
+  font-size: 1.2rem;
   border: 1px solid var(--red);
 }
 
+.success {
+  padding: 1rem 1rem 1rem 0;
+  font-size: 1.05rem;
+  max-width: 680px;
+  color: var(--cream);
+}
+
+.error {
+  padding: 1rem 1rem 1rem 0rem;
+  font-size: 1.05rem;
+  max-width: 680px;
+  color: var(--red);
+}
+
 @media screen and (min-width: 600px) {
-  /* ── CONTACT BLOCK ── */
-  .contact-section {
-    background: var(--dark);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  .contact-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .contact-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--red);
-  }
-
-  .contact-value {
-    font-size: 1rem;
-    color: var(--cream);
-    font-weight: 400;
-  }
-
-  .contact-value a {
-    color: var(--cream);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(245, 240, 232, 0.2);
-  }
-
-  .contact-value a:hover {
-    border-color: var(--red);
-    color: var(--red);
-  }
-
-  .success {
-    padding: 1rem 1rem 1rem 0;
-    font-size: 1.05rem;
-    max-width: 680px;
-    color: var(--cream);
-  }
-
-  .error {
-    padding: 1rem 1rem 1rem 0rem;
-    font-size: 1.05rem;
-    max-width: 680px;
-    color: var(--red);
-  }
 }
 
 

@@ -1,0 +1,13 @@
+.logo-outer {
+  padding: 20px;
+  img {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .logo {
+    max-width: 450px;
+  }
+}

@@ -1,0 +1,220 @@
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .flex-item {
+    flex: 1;
+  }
+
+  .flex-item-2 {
+    flex: 2;
+  }
+
+  .flex-item-3 {
+    flex: 3;
+  }
+  .flex-item-4 {
+    flex: 4;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .flex-20 {
+      width: 20%;
+    }
+
+    .flex-25 {
+      width: 25%;
+    }
+
+    .flex-30 {
+      width: 33%;
+    }
+
+    .flex-50 {
+      width: 50%;
+    }
+
+    .flex-60 {
+      width: 60%;
+    }
+
+    .flex-70 {
+      width: 70%;
+    }
+
+    .flex-80 {
+      width: 80%;
+    }
+
+    .flex-90 {
+      width: 90%;
+    }
+
+    .flex-100 {
+      width: 100%;
+    }
+
+    .flex-item {
+      flex: 1;
+    }
+
+    .flex-item-2 {
+      flex: 2;
+    }
+
+    .flex-item-3 {
+      flex: 3;
+    }
+    .flex-item-4 {
+      flex: 4;
+    }
+  }
+}
+
+
+/* fx = flex */
+/* c = column */
+/* r = row */
+.fx {
+  display: flex;
+}
+
+.c {
+  flex-direction: column;
+}
+
+.r {
+  flex-direction: row;
+}
+
+.fxc {
+  display: flex;
+  flex-direction: column;
+}
+
+.fxr {
+  display: flex;
+  flex-direction: row;
+}
+
+/* fxg = flex-grow: 1 */
+.fxg {
+  flex-grow: 1;
+}
+
+.fxg2 {
+  flex-grow: 2;
+}
+
+.fxg3 {
+  flex-grow: 3;
+}
+
+.fxg4 {
+  flex-grow: 4;
+}
+
+.fxg5 {
+  flex-grow: 5;
+}
+
+.fxs1 {
+  flex-shrink: 1;
+}
+
+.fxs2 {
+  flex-shrink: 2;
+}
+
+.fxs3 {
+  flex-shrink: 3;
+}
+
+.fxs4 {
+  flex-shrink: 4;
+}
+
+.fxs5 {
+  flex-shrink: 5;
+}
+
+.fxai-end {
+  align-items: flex-end;
+}
+
+.fxai-start {
+  align-items: flex-start;
+}
+
+.fxai-baseline {
+  align-items: baseline;
+}
+
+.fxai-center {
+  align-items: center;
+}
+
+.fxai-stretch {
+  align-items: stretch;
+}
+
+.fxjc-sb {
+  justify-content: space-between;
+}
+
+.fxjc-fs {
+  justify-content: flex-start;
+}
+
+.fxjc-fe {
+  justify-content: flex-end;
+}
+
+.fxjc-sa {
+  justify-content: space-around;
+}
+
+.fxjc-sa {
+  justify-content: space-evenly;
+}
+
+.fxjc-ce {
+  justify-content: center;
+}
+
+.fxji-baseline {
+  justify-items: baseline;
+}
+
+.fxw {
+  flex-wrap: wrap;
+}
+
+.fxnw {
+  flex-wrap: nowrap;
+}
+
+.block {
+  display: block;
+}
+
+.g5 {gap: 5px;}
+.g10 {gap: 10px;}
+.g15 {gap: 15px;}
+.g20 {gap: 20px;}
+.g30 {gap: 30px;}
+.g35 {gap: 35px;}
+.g40 {gap: 40px;}

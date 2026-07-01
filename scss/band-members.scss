@@ -1,41 +1,13 @@
-p.description, p.block-text {
-  padding: 1rem 1rem 1rem 1rem;
-  font-size: 1.05rem;
-  max-width: 680px;
-  color: var(--cream);
-}
-
-p.description-en {
-  padding: 1rem 1rem 1rem 1rem;
-  font-size: 1.05rem;
-  color: var(--muted);
-  max-width: 680px;
-  margin-bottom: 1.2rem;
-  font-style: italic;
-}
-
 .member {
   display: flex;
   flex-direction: column;
-
-  h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    line-height: 1.1;
-    color: var(--cream);
-    font-weight: 400;
-  }
-
-  h2 em {
-    font-style: italic;
-    color: var(--muted);
-  }
 
   div.bio-image {
     order: 1;
     align-content: center;
     justify-content: center;
     display: flex;
+
     img {
       width: 300px;
       height: 460px;
@@ -49,6 +21,7 @@ p.description-en {
   div.bio-data {
     order: 2;
     margin-bottom: 50px;
+    padding: 10px;
   }
 }
 
