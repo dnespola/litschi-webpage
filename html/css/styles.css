@@ -1394,13 +1394,13 @@ a, h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2rem;
   letter-spacing: 0.3em;
-  color: var(--red);
+  color: var(--litschi);
 }
 
 h2 {
   font-size: 1.6rem;
   letter-spacing: 0.3em;
-  color: var(--cream);
+  color: var(--red);
 }
 
 h3 {
@@ -1433,7 +1433,7 @@ a:visited {
 
 .quote-block {
   background: var(--dark);
-  border-left: 3px solid var(--red);
+  border-left: 4px solid var(--litschi);
   padding: 2.5rem 3rem;
   margin: 0.5rem 0 1.5rem 0;
   position: relative;
@@ -1480,9 +1480,28 @@ ul.header-nav li a.menu-item {
   font-size: 1.5rem;
   letter-spacing: 0.2em;
   font-weight: 400;
-  color: var(--cream);
+  color: var(--litschi);
 }
 
+@media screen and (min-width: 600px) {
+  ul.header-nav {
+    display: flex;
+    list-style-type: none;
+    margin-left: 300px;
+    margin-top: 50px;
+  }
+  ul.header-nav li {
+    margin-right: 2rem;
+  }
+  ul.header-nav li a.menu-item {
+    text-decoration: none;
+    background: transparent;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    color: var(--litschi);
+  }
+}
 .band-banner-wrapper {
   max-width: 100%;
   margin: 0 auto;
@@ -1493,6 +1512,11 @@ ul.header-nav li a.menu-item {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 600px) {
+  .band-banner-wrapper {
+    max-width: 1200px;
+  }
+}
 .member {
   display: flex;
   flex-direction: column;
@@ -1509,7 +1533,7 @@ ul.header-nav li a.menu-item {
   border-radius: 50%;
   object-fit: cover;
   padding: 10px;
-  border: 2px solid var(--cream);
+  border: 3px solid var(--litschi);
 }
 .member div.bio-data {
   order: 2;
@@ -1590,8 +1614,14 @@ form input, form textarea {
   color: var(--red);
 }
 
+@media screen and (min-width: 600px) {
+  form {
+    width: 500px;
+  }
+}
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 290px; /* Höhe deines Headers */
 }
 
 :root {
@@ -1602,6 +1632,7 @@ html {
   --mid: #2E2E2E;
   --muted: #888;
   --accent: #E8432A;
+  --litschi: #ffc5cb;
 }
 
 *, *::before, *::after {
@@ -1624,6 +1655,7 @@ header {
   padding: 10px;
   top: 0;
   background-color: var(--black);
+  z-index: 100;
 }
 
 section, main {
@@ -1650,37 +1682,67 @@ iframe {
   margin-bottom: 1rem;
 }
 
-.all-rights-reserved {
-  color: var(--cream);
+.social-media-row {
+  margin-top: 20px;
+  background-color: var(--litschi);
+  min-height: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.social-media-row .social-media {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+.social-media-row .all-rights-reserved {
+  display: flex;
+  justify-content: center;
+  color: var(--mid);
   font-size: 0.8rem;
 }
 
 .divider {
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(200, 39, 45, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 197, 203, 0.5), transparent);
   margin: 0 4rem;
 }
 
 .contact-icon {
-  width: 24px;
+  width: 32px;
 }
 
 .press-kit-link {
-  font-size: 1rem;
-  color: var(--cream);
+  font-size: 1.2rem;
+  color: var(--red);
   text-decoration: underline;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 600px) {
-  html {
-    scroll-padding-top: 460px; /* Höhe deines Headers */
-  }
   header {
-    padding: 0 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;
   }
-  section {
-    padding: 2rem 4rem;
+  section, main {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  iframe {
+    width: 20%;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
 

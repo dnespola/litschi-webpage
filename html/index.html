@@ -125,7 +125,7 @@
         <div class="bio">
           <div class="bio-image mb30">
             <img
-              src="./images/band/charli.jpg"
+              src="./images/band/charli.png"
               alt="Bild von Charlotte"></img>
           </div>
           
@@ -165,7 +165,7 @@
         <div class="bio">
           <div class="bio-image mb20">
             <img
-              src="./images/band/robin.jpg"
+              src="./images/band/robin.png"
               alt="Bild von Robin"></img>
           </div>
           
@@ -215,7 +215,7 @@
         <div class="bio">
           <div class="bio-image mb30">
             <img
-              src="./images/band/nes.jpg"
+              src="./images/band/nes.png"
               alt="Bild von Daniele"></img>
           </div>
           
@@ -263,7 +263,7 @@
         <div class="bio">
           <div class="bio-image mb30">
             <img
-              src="./images/band/paul.jpg"
+              src="./images/band/paul.png"
               alt="Bild von Paul"></img>
           </div>
           
@@ -278,7 +278,7 @@
               unter den Füssen, den Atem und die Richtung.
               Mit Paul spielt LITSCHI nicht einfach zusammen. Sie bewegen sich zusammen.</p>
             
-            <p>
+            <p class="mt20">
               <em>
                 Paul doesn't make music – he is music. That distinction matters, because anyone who
                 has ever shared a stage with him feels it immediately.
@@ -308,7 +308,7 @@
         <div class="bio">
           <div class="bio-image mb30">
             <img
-              src="./images/band/manu.jpg"
+              src="./images/band/manu.png"
               alt="Bild von Manu"></img>
           </div>
           
@@ -328,7 +328,7 @@
               Mit Manu am Schlagzeug klingt die Band nicht nur enger zusammen. Sie klingt stärker.
             </p>
             
-            <p>
+            <p class="mt20">
               <em>
                 Manu brings something that can't be taught – experience.
                 Years behind the kit have given him a calm, pragmatic approach that makes everything
@@ -352,64 +352,71 @@
     
     <!-- CONTACT -->
     <footer id="contact">
-      <h1 class="section-title">Kontakt</h1>
-      <div>
-        <form action="send.php" method="POST" id="contact-form">
-          <div>
-            <label for="name">Name:</label>
-          </div>
-          <div>
-            <input type="text" id="name" name="name" placeholder="Dein Name" required>
-          </div>
-          
-          <div>
-            <label for="email">E-Mail:</label>
-          </div>
-          
-          <div>
-            <input type="email" id="email" name="email" placeholder="deine@email.com"
-              required>
-          </div>
-          
-          <label for="nachricht">Nachricht:</label>
-          <textarea id="nachricht" name="nachricht"
-            cols="30" rows="10"
-            placeholder="Deine Nachricht..."
-            required></textarea>
-          
-          <!-- Honeypot gegen Spam (verstecktes Feld) -->
-          <input type="text" name="website" style="display:none" tabindex="-1"
-            autocomplete="off">
-          
-          <button class="form-submit-button" type="submit">Nachricht senden</button>
-          
-          <div id="message"></div>
-        </form>
+      <div class="footer-inner">
+        <h1 class="section-title">Kontakt</h1>
+        <div>
+          <form action="send.php" method="POST" id="contact-form">
+            
+            <div class="mb10">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Dein Name" required>
+            </div>
+            
+            <div class="mb10">
+              <label for="email">E-Mail:</label>
+              <input type="email" id="email" name="email" placeholder="deine@email.com"
+                required>
+            </div>
+            
+            <div class="mb10">
+              <label for="nachricht">Nachricht:</label>
+              <textarea id="nachricht" name="nachricht"
+                cols="30" rows="10"
+                placeholder="Deine Nachricht..."
+                required></textarea>
+            
+            </div>
+            
+            <!-- Honeypot gegen Spam (verstecktes Feld) -->
+            <input type="text" name="website" style="display:none" tabindex="-1"
+              autocomplete="off">
+            
+            <button class="form-submit-button" type="submit">Nachricht senden</button>
+            
+            <div id="message"></div>
+          </form>
+        </div>
       </div>
       
-      <div class="fx fxjc-sb mt40 mb10">
-        <a href="https://soundcloud.com/litschi-173108532"
-          target="_blank" class="mt10">
-          <img aria-hidden="true" class="contact-icon" src="./images/icons/soundcloud-cream.svg"
-            alt="Soundcloud icon">
-        </a>
-        
-        <a target="_blank"
-          class="mt10"
-          href="https://www.instagram.com/litschi_band?igsh=MWp6NHVmNnA5dXBnNg%3D%3D">
-          <img aria-hidden="true" class="contact-icon" src="./images/icons/instagram-cream.svg"
-            alt="Instagram icon">
-        </a>
-        
-        <a class="press-kit-link mt8" href="./images/pdf/presskit.pdf"
-          download="Litschi-Band-Presskit.pdf">
-          Presskit
-        </a>
-      </div>
       
-      <div class="fx fxjc-ce mt20 ">
-        <p class="all-rights-reserved">@2026 LITSCHI. Alle Rechte vorbehalten.</p>
+      <div class="social-media-row">
+        <div class="social-media fxjc-sb mt40 mb10">
+          <a href="https://soundcloud.com/litschi-173108532"
+            target="_blank" class="mt15">
+            <img aria-hidden="true" class="contact-icon" src="./images/icons/soundcloud-red.svg"
+              alt="Soundcloud icon">
+          </a>
+          
+          <a target="_blank"
+            class="mt10"
+            href="https://www.instagram.com/litschi_band?igsh=MWp6NHVmNnA5dXBnNg%3D%3D">
+            <img aria-hidden="true" class="contact-icon" src="./images/icons/instagram-red.svg"
+              alt="Instagram icon">
+          </a>
+          
+          <a class="press-kit-link mt12" href="./images/pdf/presskit.pdf"
+            download="Litschi-Band-Presskit.pdf">
+            Presskit
+          </a>
+        </div>
+        
+        <div>
+          <p class="all-rights-reserved">@2026 LITSCHI. Alle Rechte vorbehalten.</p>
+        
+        </div>
+      
       </div>
+    
     </footer>
     
     <script>

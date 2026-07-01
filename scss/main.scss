@@ -11,7 +11,7 @@
 
 html {
   scroll-behavior: smooth;
-  //scroll-padding-top: 460px; /* Höhe deines Headers */
+  scroll-padding-top: 290px; /* Höhe deines Headers */
 }
 
 :root {
@@ -22,6 +22,7 @@ html {
   --mid: #2E2E2E;
   --muted: #888;
   --accent: #E8432A;
+  --litschi: #ffc5cb;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,12 +41,12 @@ header {
   padding: 10px;
   top: 0;
   background-color: var(--black);
+  z-index: 100;
 }
 
 section, main {
   padding: 20px;
   width: 100%;
-  //border: 1px solid var(--red);
 }
 
 footer {
@@ -67,39 +68,77 @@ iframe {
   margin-bottom: 1rem;
 }
 
-.all-rights-reserved {
-  color: var(--cream);
-  font-size: 0.8rem;
+.social-media-row {
+  margin-top: 20px;
+  background-color: var(--litschi);
+  min-height: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  .social-media {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  .all-rights-reserved {
+    display: flex;
+    justify-content: center;
+    color: var(--mid);
+    font-size: 0.8rem;
+  }
 }
 
 .divider {
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(200,39,45,0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 197, 203, 0.5), transparent);
   margin: 0 4rem;
 }
 
 .contact-icon {
-  width: 24px;
+  width: 32px;
 }
 
 .press-kit-link {
-  font-size: 1rem;
-  color: var(--cream);
+  font-size: 1.2rem;
+  color: var(--red);
   text-decoration: underline;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 600px) {
   html {
-    scroll-padding-top: 460px; /* Höhe deines Headers */
+    //scroll-padding-top: 460px; /* Höhe deines Headers */
   }
 
   header {
-    padding: 0 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;
   }
 
-  section {
-    padding: 2rem 4rem;
+  section, main {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  footer {
+    width: 100%;
+    margin: 0 auto;
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  iframe {
+    width: 20%;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
 
