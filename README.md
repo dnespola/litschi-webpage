@@ -79,6 +79,10 @@ php$mail->setFrom('deine@gmail.com', 'Kontaktformular');
 $mail->addAddress('deine@gmail.com');
 ```
 
+## Presskit
+Das Presskit wurde mit Canvas erstellt und ist im Profil von Daniele Verfügbar.
+https://www.canva.com/
+
 
 ## Stoppen
 ```bash
