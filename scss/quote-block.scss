@@ -1,0 +1,28 @@
+.quote-block {
+  background: var(--dark);
+  border-left: 4px solid var(--litschi);
+  //border-top: 5px solid var(--litschi);
+  //border-right: 1px solid var(--litschi);
+  //border-bottom: 1px solid var(--litschi);
+  padding: 2.5rem 3rem;
+  margin: 0.5rem 0 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-block p {
+  font-family: 'Inria ', serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--cream);
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.quote-block p.en {
+  margin-top: 1rem;
+  color: var(--muted);
+}

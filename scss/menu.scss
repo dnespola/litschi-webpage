@@ -1,0 +1,35 @@
+ul.header-nav {
+  list-style-type: none;
+  padding: 40px 10px;
+
+  li {
+    a.menu-item {
+      text-decoration: none;
+      background: transparent;
+      font-size: 1.5rem;
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      color: var(--litschi);
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  ul.header-nav {
+    display: flex;
+    list-style-type: none;
+    margin-left: 300px;
+    margin-top: 50px;
+    li {
+      margin-right: 2rem;
+      a.menu-item {
+        text-decoration: none;
+        background: transparent;
+        font-size: 1.5rem;
+        letter-spacing: 0.2em;
+        font-weight: 400;
+        color: var(--litschi);
+      }
+    }
+  }
+}
