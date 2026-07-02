@@ -38,8 +38,15 @@ html/
   └── vendor/        ← wichtig, muss mit!
   
   Nur der Inhalt von html/ – nicht den ganzen Docker-Kram, der ist nur für lokales Testen.
+  
+  Achtung!
+  Wenn neue Bilder hochgeladen werden, oder das Styling angepasst wird, muss die Versionsnummer 
+  der Files angepasst werden.
+  
+  Beispiele:
+  <img class="band-banner" src="./images/band/band.png?=v1" alt="Bild der ganzen Band">
+  <img src="./images/band/paul.png?=v1" alt="Bild von Paul"></img>
 ```
-
 
 ##send.php anpassen für Produktion
 ```
