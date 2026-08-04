@@ -49,10 +49,10 @@ docker-compose up
 ```
 
 ### URLs
-| URL | Beschreibung |
-|-----|-------------|
-| http://localhost:8180 | Kontaktformular |
-| http://localhost:8025 | MailHog (gesendete E-Mails ansehen) |
+| URL | Beschreibung                                              |
+|-----|-----------------------------------------------------------|
+| http://localhost:8180 | Kontaktformular               |
+| http://localhost:8025 | MailHog (gesendete E-Mails ansehen)                       |
 
 ## Deployment
 

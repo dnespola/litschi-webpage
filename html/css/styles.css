@@ -1459,15 +1459,21 @@ a:visited {
 
 .logo-outer {
   padding: 20px;
+  width: 400px;
 }
 .logo-outer img {
   width: 100%;
-  max-width: 150px;
+  max-width: 300px;
 }
 
 @media screen and (min-width: 600px) {
-  .logo {
-    max-width: 450px;
+  .logo-outer {
+    padding: 20px;
+    width: 400px;
+  }
+  .logo-outer img {
+    width: 100%;
+    max-width: 300px;
   }
 }
 ul.header-nav {
